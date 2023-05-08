@@ -1,0 +1,76 @@
+unit UCADPacientes;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, Grids, DBGrids, StdCtrls, Mask, DBCtrls, ExtCtrls, Buttons;
+
+type
+  TFrmPacientes = class(TForm)
+    PnlTopo: TPanel;
+    LblCadastro: TLabel;
+    Label1: TLabel;
+    DBEdit1: TDBEdit;
+    Label2: TLabel;
+    DBEdit2: TDBEdit;
+    Label3: TLabel;
+    DBEdit3: TDBEdit;
+    Label4: TLabel;
+    DBEdit4: TDBEdit;
+    Label5: TLabel;
+    DBEdit5: TDBEdit;
+    DBGrid1: TDBGrid;
+    BtnSair: TSpeedButton;
+    BtnNovo: TBitBtn;
+    BtnEditar: TBitBtn;
+    BtnSalvar: TBitBtn;
+    BtnCancelar: TBitBtn;
+    procedure BtnNovoClick(Sender: TObject);
+    procedure BtnEditarClick(Sender: TObject);
+    procedure BtnSairClick(Sender: TObject);
+    procedure BtnCancelarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmPacientes: TFrmPacientes;
+
+implementation
+
+uses UDM;
+
+{$R *.dfm}
+
+procedure TFrmPacientes.BtnCancelarClick(Sender: TObject);
+begin
+  dm.cdsAgenda.CancelUpdates;
+end;
+
+procedure TFrmPacientes.BtnEditarClick(Sender: TObject);
+begin
+  dm.cdsAgenda.Append;
+  dm.cdsAgenda.Edit;
+end;
+
+procedure TFrmPacientes.BtnNovoClick(Sender: TObject);
+var proximo: Integer;
+begin
+  dm.cdsAgenda.Append;
+  proximo := dm.cdsAgenda
+end;
+
+procedure TFrmPacientes.BtnSairClick(Sender: TObject);
+begin
+  if Application.MessageBox('Deseja sair da aba ?', 'Sair', MB_ICONINFORMATION+MB_YESNO) = MRYES then
+  begin
+    Application.Terminate;
+  end
+  else
+    Abort;
+end;
+
+end.

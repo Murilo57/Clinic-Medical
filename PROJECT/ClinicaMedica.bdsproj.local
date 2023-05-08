@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/03/13 14:44:50.428.pas,C:\Documents and Settings\Aldo\Meus documentos\Borland Studio Projects\Unit1.pas=C:\Documents and Settings\Aldo\Meus documentos\Projetos Delphi\Clinica Médica\FORMS\UPrincipal.pas</Transaction>
+    <Transaction>2023/03/13 14:44:50.428.dfm,C:\Documents and Settings\Aldo\Meus documentos\Borland Studio Projects\Unit1.dfm=C:\Documents and Settings\Aldo\Meus documentos\Projetos Delphi\Clinica Médica\FORMS\UPrincipal.dfm</Transaction>
+    <Transaction>2023/03/13 14:45:19.630.bdsproj,C:\Documents and Settings\Aldo\Meus documentos\Borland Studio Projects\Project1.bdsproj=C:\Documents and Settings\Aldo\Meus documentos\Projetos Delphi\Clinica Médica\PROJECT\ClinicaMedica.bdsproj</Transaction>
+    <Transaction>2023/03/13 15:37:28.750.pas,C:\Documents and Settings\Aldo\Meus documentos\Projetos Delphi\Clinica Médica\PROJECT\Unit1.pas=C:\Documents and Settings\Aldo\Meus documentos\Projetos Delphi\Clinica Médica\FORMS\UDM.pas</Transaction>
+    <Transaction>2023/03/13 15:37:28.750.dfm,C:\Documents and Settings\Aldo\Meus documentos\Projetos Delphi\Clinica Médica\PROJECT\Unit1.dfm=C:\Documents and Settings\Aldo\Meus documentos\Projetos Delphi\Clinica Médica\FORMS\UDM.dfm</Transaction>
+    <Transaction>2023/03/13 16:36:44.260.pas,C:\Documents and Settings\Aldo\Meus documentos\Projetos Delphi\Clinica Médica\PROJECT\Unit1.pas=C:\Documents and Settings\Aldo\Meus documentos\Projetos Delphi\Clinica Médica\FORMS\UCADPacientes.pas</Transaction>
+    <Transaction>2023/03/13 16:36:44.260.dfm,C:\Documents and Settings\Aldo\Meus documentos\Projetos Delphi\Clinica Médica\PROJECT\Unit1.dfm=C:\Documents and Settings\Aldo\Meus documentos\Projetos Delphi\Clinica Médica\FORMS\UCADPacientes.dfm</Transaction>
+    <Transaction>2023/03/13 16:37:06.502.pas,C:\Documents and Settings\Aldo\Meus documentos\Projetos Delphi\Clinica Médica\PROJECT\Unit2.pas=C:\Documents and Settings\Aldo\Meus documentos\Projetos Delphi\Clinica Médica\FORMS\UCADAgendamento.pas</Transaction>
+    <Transaction>2023/03/13 16:37:06.502.dfm,C:\Documents and Settings\Aldo\Meus documentos\Projetos Delphi\Clinica Médica\PROJECT\Unit2.dfm=C:\Documents and Settings\Aldo\Meus documentos\Projetos Delphi\Clinica Médica\FORMS\UCADAgendamento.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

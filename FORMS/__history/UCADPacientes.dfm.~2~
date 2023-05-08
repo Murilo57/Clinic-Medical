@@ -1,0 +1,239 @@
+object FrmPacientes: TFrmPacientes
+  Left = 0
+  Top = 0
+  Caption = 'Cadastro de Pacientes'
+  ClientHeight = 522
+  ClientWidth = 789
+  Color = clWhite
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 60
+    Top = 155
+    Width = 14
+    Height = 16
+    Caption = 'ID'
+    FocusControl = DBEdit1
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 60
+    Top = 208
+    Width = 35
+    Height = 16
+    Caption = 'NOME'
+    FocusControl = DBEdit2
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 60
+    Top = 264
+    Width = 56
+    Height = 16
+    Caption = 'CELULAR'
+    FocusControl = DBEdit3
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 60
+    Top = 322
+    Width = 114
+    Height = 16
+    Caption = 'DATA_CADASTRO'
+    FocusControl = DBEdit4
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 60
+    Top = 378
+    Width = 22
+    Height = 16
+    Caption = 'CPF'
+    FocusControl = DBEdit5
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object PnlTopo: TPanel
+    Left = 0
+    Top = 0
+    Width = 789
+    Height = 100
+    Align = alTop
+    Color = clWhite
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+    ExplicitLeft = -30
+    ExplicitTop = 8
+    ExplicitWidth = 788
+    object LblCadastro: TLabel
+      Left = 30
+      Top = 30
+      Width = 370
+      Height = 40
+      Caption = 'Cadastro de Pacientes'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -33
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object BtnSair: TSpeedButton
+      Left = 680
+      Top = 50
+      Width = 23
+      Height = 22
+      Caption = '&Sair'
+      Layout = blGlyphTop
+    end
+  end
+  object DBEdit1: TDBEdit
+    Left = 60
+    Top = 170
+    Width = 134
+    Height = 24
+    DataField = 'ID'
+    DataSource = DM.dtsPacientes
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 1
+  end
+  object DBEdit2: TDBEdit
+    Left = 60
+    Top = 230
+    Width = 286
+    Height = 24
+    DataField = 'NOME'
+    DataSource = DM.dtsPacientes
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 2
+  end
+  object DBEdit3: TDBEdit
+    Left = 60
+    Top = 286
+    Width = 212
+    Height = 24
+    DataField = 'CELULAR'
+    DataSource = DM.dtsPacientes
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 3
+  end
+  object DBEdit4: TDBEdit
+    Left = 60
+    Top = 341
+    Width = 134
+    Height = 24
+    DataField = 'DATA_CADASTRO'
+    DataSource = DM.dtsPacientes
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 4
+  end
+  object DBEdit5: TDBEdit
+    Left = 60
+    Top = 400
+    Width = 186
+    Height = 24
+    DataField = 'CPF'
+    DataSource = DM.dtsPacientes
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 5
+  end
+  object DBGrid1: TDBGrid
+    Left = 430
+    Top = 145
+    Width = 320
+    Height = 331
+    DataSource = DM.dtsPacientes
+    TabOrder = 6
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'ID'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NOME'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CELULAR'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'DATA_CADASTRO'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CPF'
+        Visible = True
+      end>
+  end
+end

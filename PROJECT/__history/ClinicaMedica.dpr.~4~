@@ -1,0 +1,17 @@
+program ClinicaMedica;
+
+uses
+  Forms,
+  UPrincipal in '..\FORMS\UPrincipal.pas' {FrmPrincipal},
+  UDM in '..\FORMS\UDM.pas' {DataModule1: TDataModule},
+  UCADPacientes in '..\FORMS\UCADPacientes.pas' {Form1};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TFrmPrincipal, FrmPrincipal);
+  Application.CreateForm(TDataModule1, DataModule1);
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.

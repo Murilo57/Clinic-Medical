@@ -1,0 +1,59 @@
+unit UCADAgendamento;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, Buttons, Grids, DBGrids, Mask, DBCtrls, ExtCtrls;
+
+type
+  TFrmAgendamento = class(TForm)
+    PnlTopo: TPanel;
+    LblCadastro: TLabel;
+    BtnSair: TSpeedButton;
+    Label2: TLabel;
+    DBEdit2: TDBEdit;
+    Label3: TLabel;
+    DBEdit3: TDBEdit;
+    Label4: TLabel;
+    DBEdit4: TDBEdit;
+    Label5: TLabel;
+    DBEdit5: TDBEdit;
+    DBGrid1: TDBGrid;
+    BtnNovo: TBitBtn;
+    BtnEditar: TBitBtn;
+    BtnSalvar: TBitBtn;
+    BtnDeletar: TBitBtn;
+    BtnCancelar: TBitBtn;
+    DBLookupComboBox1: TDBLookupComboBox;
+    procedure BtnNovoClick(Sender: TObject);
+    procedure BtnSairClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmAgendamento: TFrmAgendamento;
+
+implementation
+
+uses UDM;
+
+{$R *.dfm}
+
+procedure TFrmAgendamento.BtnNovoClick(Sender: TObject);
+var proximo: Integer;
+begin
+  dm.cdsAgenda.Open;
+  dm.cdsAgenda.Last;
+
+end;
+
+procedure TFrmAgendamento.BtnSairClick(Sender: TObject);
+begin
+  Application.Terminate;
+end;
+
+end.

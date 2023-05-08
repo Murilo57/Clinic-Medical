@@ -1,0 +1,46 @@
+unit UPrincipal;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, jpeg, ExtCtrls, StdCtrls, Buttons, Menus;
+
+type
+  TFrmPrincipal = class(TForm)
+    PnlTopo: TPanel;
+    Image1: TImage;
+    SpeedButton1: TSpeedButton;
+    BtnAgenda: TSpeedButton;
+    MainMenu1: TMainMenu;
+    BtnSair: TSpeedButton;
+    MnSistema: TMenuItem;
+    MnCadastro: TMenuItem;
+    Sair1: TMenuItem;
+    MnPacientes: TMenuItem;
+    Agendamentos1: TMenuItem;
+    procedure BtnSairClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmPrincipal: TFrmPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFrmPrincipal.BtnSairClick(Sender: TObject);
+begin
+  if Application.Messagebox('Deseja sair?', 'Exit', MB_ICONINFORMATION+MB_YESNO) = MRYES then
+  begin
+    Application.Terminate;
+  end
+  else
+  Abort;
+end;
+
+end.

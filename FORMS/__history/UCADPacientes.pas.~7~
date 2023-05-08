@@ -1,0 +1,108 @@
+unit UCADPacientes;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, Grids, DBGrids, StdCtrls, Mask, DBCtrls, ExtCtrls, Buttons, DBClient;
+
+type
+  TFrmPacientes = class(TForm)
+    PnlTopo: TPanel;
+    LblCadastro: TLabel;
+    Label1: TLabel;
+    edtID: TDBEdit;
+    Label2: TLabel;
+    edtNome: TDBEdit;
+    Label3: TLabel;
+    edtCelular: TDBEdit;
+    Label4: TLabel;
+    edtCadastro: TDBEdit;
+    Label5: TLabel;
+    edtCPF: TDBEdit;
+    DBGrid1: TDBGrid;
+    BtnSair: TSpeedButton;
+    BtnNovo: TBitBtn;
+    BtnEditar: TBitBtn;
+    BtnSalvar: TBitBtn;
+    BtnCancelar: TBitBtn;
+    BtnDeletar: TBitBtn;
+    DBNavigator1: TDBNavigator;
+    LblPesquisa: TLabel;
+    edtPesquisa: TEdit;
+    procedure edtPesquisaChange(Sender: TObject);
+    procedure BtnDeletarClick(Sender: TObject);
+    procedure BtnSalvarClick(Sender: TObject);
+    procedure BtnNovoClick(Sender: TObject);
+    procedure BtnEditarClick(Sender: TObject);
+    procedure BtnSairClick(Sender: TObject);
+    procedure BtnCancelarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmPacientes: TFrmPacientes;
+
+implementation
+
+uses UDM;
+
+{$R *.dfm}
+
+procedure TFrmPacientes.BtnCancelarClick(Sender: TObject);
+begin
+  dm.cdsAgenda.CancelUpdates;
+  Exit;
+end;
+
+procedure TFrmPacientes.BtnDeletarClick(Sender: TObject);
+begin
+  dm.cdsPacientes.Delete;
+  dm.cdsPacientes.ApplyUpdates(0);
+end;
+
+procedure TFrmPacientes.BtnEditarClick(Sender: TObject);
+begin
+  dm.cdsPacientes.Edit;
+end;
+
+procedure TFrmPacientes.BtnNovoClick(Sender: TObject);
+var proximo: Integer;
+begin
+  dm.cdsPacientes.Open;
+  dm.cdsPacientes.Last;
+  proximo := dm.cdsPacientesID.AsInteger + 1;
+  dm.cdsPacientes.Append;
+  dm.cdsPacientesID.AsInteger := proximo;
+  dm.cdsPacientesDATA_CADASTRO.AsDateTime :=Date;
+  edtNome.SetFocus;
+end;
+
+procedure TFrmPacientes.BtnSairClick(Sender: TObject);
+begin
+  if Application.MessageBox('Deseja sair da aba ?', 'Sair', MB_ICONINFORMATION+MB_YESNO) = MRYES then
+  begin
+    Application.Terminate;
+  end
+  else
+    Abort;
+end;
+
+procedure TFrmPacientes.BtnSalvarClick(Sender: TObject);
+begin
+  dm.cdsPacientes.Post;
+  dm.cdsPacientes.ApplyUpdates(0);
+  Application.MessageBox('Registro salvo com sucesso', 'Salvo', MB_ICONINFORMATION+MB_OK);
+  Exit;
+end;
+
+procedure TFrmPacientes.edtPesquisaChange(Sender: TObject);
+begin
+  dm.cdsPacientes.Locate('NOME', edtPesquisa.Text,[]);
+  // dm.cdsLogin.Locate('NOME',EdtNome.Text,[]) and dm.cdsLogin.Locate ('SENHA', EdtSenha.Text,[])
+end;
+
+end.

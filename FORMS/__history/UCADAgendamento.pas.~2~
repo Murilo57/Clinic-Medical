@@ -1,0 +1,26 @@
+unit UCADAgendamento;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls;
+
+type
+  TFrmAgendamento = class(TForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmAgendamento: TFrmAgendamento;
+
+implementation
+
+uses UDM;
+
+{$R *.dfm}
+
+end.

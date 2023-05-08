@@ -1,0 +1,13 @@
+program ClinicaMedica;
+
+uses
+  Forms,
+  UPrincipal in '..\FORMS\UPrincipal.pas' {FrmPrincipal};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TFrmPrincipal, FrmPrincipal);
+  Application.Run;
+end.

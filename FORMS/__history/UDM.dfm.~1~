@@ -1,0 +1,47 @@
+object DataModule1: TDataModule1
+  OldCreateOrder = False
+  Height = 359
+  Width = 314
+  object Conexao: TSQLConnection
+    Left = 30
+    Top = 15
+  end
+  object sqlPacientes: TSQLDataSet
+    Params = <>
+    Left = 25
+    Top = 95
+  end
+  object dspPacientes: TDataSetProvider
+    Left = 25
+    Top = 160
+  end
+  object cdsPacientes: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    Left = 25
+    Top = 215
+  end
+  object dtsPacientes: TDataSource
+    Left = 25
+    Top = 280
+  end
+  object sqlAgenda: TSQLDataSet
+    Params = <>
+    Left = 115
+    Top = 95
+  end
+  object dspAgenda: TDataSetProvider
+    Left = 115
+    Top = 160
+  end
+  object cdsAgenda: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    Left = 120
+    Top = 215
+  end
+  object dtsAgenda: TDataSource
+    Left = 115
+    Top = 280
+  end
+end
